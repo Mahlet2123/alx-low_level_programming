@@ -1,0 +1,35 @@
+
+#creating the files
+
+for filename in ${filenames[@]}
+
+do
+
+echo \#\!/bin/bash >> $filename
+
+chmod u+x $filename
+
+done
+
+
+
+echo "chmod u+x hello" >> 3-name
+
+echo "chmod ug+x,o+r hello" >> 4-puts.c
+
+echo "chmod +x hello" >> 5-printf.c
+
+echo "chmod 007 hello" >> 6-size.c
+
+echo "gcc -S -masm=intel $CFILE" >> 100-intel
+
+
+
+
+# Un-comment this if you want to commit the changes and push to your git repositor
+
+#git add .
+
+#git commit -m "commit using script"
+
+#git push
