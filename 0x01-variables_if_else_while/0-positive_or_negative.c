@@ -7,7 +7,7 @@
 /* more headers goes there */
 
 /*
- * main - Entry point
+ * int main - Entry point
  *
  *Return: alwaya 0
  */
