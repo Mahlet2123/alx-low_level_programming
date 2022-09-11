@@ -4,9 +4,7 @@
 
 #include <time.h>
 
-/* more headers goes there */
-
-/*
+/** 
  * int main - Entry point
  *
  *Return: alwaya 0
