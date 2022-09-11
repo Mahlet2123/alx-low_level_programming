@@ -7,7 +7,7 @@
 /* more headers goes there */
 
 /*
- *main - Entry point
+ * main - Entry point
  *
  *Return: alwaya 0
  */
