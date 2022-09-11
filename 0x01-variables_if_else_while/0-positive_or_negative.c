@@ -5,7 +5,7 @@
 #include <time.h>
 
 /** 
- * int main - Entry point
+ * main - Entry point
  *
  *Return: alwaya 0
  */
