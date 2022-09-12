@@ -1,35 +1,17 @@
 #include <stdio.h>
 
-
-
 /**
+ * main - entry point
  *
- * * main - Print all single digit numbers
- *
- * *
- *
- * * Return: Always 0 (Success)
- *
- * */
-
+ * Return: 0
+ */
 int main(void)
 
 {
+	int x;
 
-	int digit;
-
-
-
-	for (digit = 0; digit < 10; digit++)
-
-		printf("%i", digit);
-
-	putchar('\n');
-
-
-
+	for (x = 0; x <= 9; x++)
+		printf("%d", x);
+	putchar(10);
 	return (0);
-
 }
-
-
