@@ -19,10 +19,13 @@ int main(void)
 			{
 				putchar(x + '0');
 				putchar(y + '0');
-				{
-					putchar(44);
-					putchar(32);
-				}
+					
+					if (x < 8)
+					{
+						putchar(44);
+						putchar(32);
+					}
+			
 			}
 		}
 	}
