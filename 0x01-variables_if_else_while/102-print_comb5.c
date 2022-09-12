@@ -21,7 +21,7 @@ int main(void)
 			{
 				for (b = 1; b < 10; b++)
 				{
-					if (a != b)
+					if (x != a && y != b)
 					{
 						putchar(x + '0');
 						putchar(y + '0');
