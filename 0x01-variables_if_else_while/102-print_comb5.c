@@ -21,13 +21,16 @@ int main(void)
 			{
 				for (b = 1; b < 10; b++)
 				{
-					putchar(x + '0');
-					putchar(y + '0');
-					putchar(32);
-					putchar(a + '0');
-					putchar(b + '0');
-					putchar(44);
-					putchar(32);
+					if (a != b)
+					{
+						putchar(x + '0');
+						putchar(y + '0');
+						putchar(32);
+						putchar(a + '0');
+						putchar(b + '0');
+						putchar(44);
+						putchar(32);
+					}
 				}
 			}
 		}
