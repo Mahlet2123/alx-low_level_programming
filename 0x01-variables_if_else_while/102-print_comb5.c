@@ -10,23 +10,25 @@ int main(void)
 {
 	int x;
 	int y;
+	int a;
+	int b;
 
 	for (x = 0; x < 10; x++)
 	{
 		for (y = 0; y < 10; y++)
 		{
-			if (x < y)
+			for (a = 0; a < 10; a++)
 			{
-				putchar(x + '0');
-				putchar(x + '0');
-				putchar(32);
-				putchar(x + '0');
-				putchar(y + '0');
-					if (x < 8)
-					{
-						putchar(44);
-						putchar(32);
-					}
+				for (b = 0; b < 10; b++)
+				{
+					putchar(x + '0');
+					putchar(y + '0');
+					putchar(32);
+					putchar(a + '0');
+					putchar(b + '0');
+					putchar(44);
+					putchar(32);
+				}
 			}
 		}
 	}
