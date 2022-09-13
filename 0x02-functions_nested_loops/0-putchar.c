@@ -1,13 +1,23 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- * main - entry point
+ * main - program that prints _putchar.
  *
- * Return 0
+ * Return: 0
  */
 
-int main()
+int main(void)
 {
-	printf("_putchar");
+	int c = 0;
+
+	char strg[] = "_putchar";
+	for (; c < 8; c++)
+
+	{
+
+		_putchar(strg[c]);
+	}
+	_putchar ('\n');
 	return (0);
+
 }
