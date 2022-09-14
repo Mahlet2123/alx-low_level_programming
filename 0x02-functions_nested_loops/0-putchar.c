@@ -11,6 +11,7 @@ int main(void)
 	int c = 0;
 
 	char strg[] = "_putchar";
+
 	for (; c < 8; c++)
 
 	{
