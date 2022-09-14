@@ -3,16 +3,14 @@
 /**
  * main - entry point
  *
- * Return 0
- *
  * _putchar - prints a character string
  *
- * Return 0
+ * Return: 0
  */
 
-int main()
+int main(void)
 {
-	_putchar('_');		
+	_putchar('_');
 	_putchar('p');
 	_putchar('u');
 	_putchar('t');
