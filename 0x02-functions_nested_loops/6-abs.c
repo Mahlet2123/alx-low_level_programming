@@ -1,20 +1,23 @@
 #include "main.h"
 
 /**
- * _abs - function that computes the absolute value of an integer.
+ * _abs - converts to a real number
  *
- * @i: The input number to check
+ *@i: intiger
  *
- * Return: int.
+ * Return: int
  */
 
 int _abs(int i)
 {
-	if (i < 0)
+	if ((i >= 0))
 	{
-		i = i * (-1);
-		return (i);
+		_putchar(i);
 	}
-	else
-		return (i);
+	else if (i < 0)
+	{
+		(i = i * (-1));
+		_putchar(i);
+	}
+	return (i);
 }
