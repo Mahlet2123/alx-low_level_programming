@@ -3,6 +3,8 @@
 /**
  * main - program that prints _putchar.
  *
+ * print_alphabet - prints
+ *
  * Return: 0
  */
 
