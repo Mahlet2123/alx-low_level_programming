@@ -3,7 +3,7 @@
 /**
  * print_last_digit - converts to a real number
  *
- *@n: intiger
+ *@i: intiger
  *
  * Return: int
  */
@@ -16,6 +16,5 @@ int print_last_digit(int i)
 	if (i < 0)
 	i *= -1;
 	_putchar(i + '0');
-	
 	return (i);
 }
