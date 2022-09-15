@@ -5,6 +5,6 @@
 
 void positive_or_negative(int i);
 
-void main(void);
+int main(void);
 
 #endif /* MAIN_H */
