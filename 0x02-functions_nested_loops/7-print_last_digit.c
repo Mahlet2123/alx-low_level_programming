@@ -1,23 +1,21 @@
 #include "main.h"
 
 /**
- * _abs - converts to a real number
+ * print_last_digit - converts to a real number
  *
- *@i: intiger
+ *@n: intiger
  *
  * Return: int
  */
 
-int _abs(int i)
+int print_last_digit(int i)
 {
-	if (i >= 0)
-	{
-		return (i);
-	}
-	else if (i < 0)
-	{
-		(i = i * (-1));
-		return (i);
-	}
-return (i);
+
+	i %= 10;
+
+	if (i < 0)
+	i *= -1;
+	_putchar(i + '0');
+	
+	return (i);
 }
