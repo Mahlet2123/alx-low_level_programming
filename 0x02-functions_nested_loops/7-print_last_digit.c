@@ -1,19 +1,23 @@
 #include "main.h"
 
 /**
- * print_last_digit - function that prints the last digit of a number.
+ * _abs - converts to a real number
  *
- * @i: The input number to check
+ *@i: intiger
  *
- * Return: int.
+ * Return: int
  */
 
-int print_last_digit(int i)
+int _abs(int i)
 {
-	i %= 10;
-
-	if (i < 0)
-		i *= -1;
-	_putchar(i + '0');
-	return (i);
+	if (i >= 0)
+	{
+		return (i);
+	}
+	else if (i < 0)
+	{
+		(i = i * (-1));
+		return (i);
+	}
+return (i);
 }
