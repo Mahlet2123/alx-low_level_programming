@@ -2,6 +2,8 @@
 
 #define MAIN_H
 
+void main(void);
+
 int _putchar(char c);
 
 int _isupper(int c);
@@ -26,4 +28,5 @@ void print_triangle(int size);
 
 void print_number(int n);
 
+void print_number(int i);
 #endif

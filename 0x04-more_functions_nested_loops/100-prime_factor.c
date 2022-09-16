@@ -1,7 +1,5 @@
 #include "main.h"
 
-int _putchar(char c);
-
 /**
  * print_number - like a hello world
  *
@@ -9,7 +7,6 @@ int _putchar(char c);
  *
  * No return
  */
-
 
 void print_number(int i)
 {
