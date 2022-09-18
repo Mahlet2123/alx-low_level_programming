@@ -1,26 +1,26 @@
 #include "main.h"
 
 /**
- *jack_bauer - prints every minute of the day of Jack Bauer
+ * void jack_bauer - converts to a real number
  *
- * starting from 00:00 to 23:59
+ * Return: 0
  */
+
 void jack_bauer(void)
 {
-	int i, j;
+	int i;
+	int j;
 
-	i = 0;
-	for (; i < 24 ; i++)
+	for (i = 0; i < 24; i++)
 	{
-		j = 0;
-		for (; j < 60 ; j++)
+		for (j = 0; j < 60; j++)
 		{
 			_putchar((i / 10) + '0');
-			_putchar((i % 10) + '0');
+			_putchar((i % 10) + '0');	
 			_putchar(':');
 			_putchar((j / 10) + '0');
 			_putchar((j % 10) + '0');
-			_putchar('\n');
+			_putchar(10);
 		}
 	}
 }
