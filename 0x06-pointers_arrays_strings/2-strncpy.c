@@ -2,21 +2,19 @@
 #include <string.h>
 
 /**
- *_strncat- function that concatenates two strings
+ *_strncpy- function that concatenates two strings
  * @dest: destination string
  * @src: source string
  *@n: number
  *Return: dest
  */
-
-char *_strncat(char *dest, char *src, int n)
+char *_strncpy(char *dest, char *src, int n)
 {
-	int l1 = strlen(dest);
 	int i;
 
 	for (i = 0; i < n; i++)
 	{
-		dest[l1 + i] = src[i];
+		dest[i] = src[i];
 	}
 return (dest);
 }
