@@ -1,0 +1,7 @@
+git add .
+
+git commit -m "task 0x06"
+
+git push
+
+
