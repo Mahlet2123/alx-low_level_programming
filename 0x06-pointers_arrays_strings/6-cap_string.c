@@ -10,13 +10,10 @@ char *cap_string(char *str)
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		if (i == 0)
+		if (i == 0 && str[0] >= 'a' && str[0] <= 'z')
 		{
-			if ((str[i] >= 'a' && str[i] <= 'z'))
-			{
-				str[i] = str[i] - 32;
-				continue;
-			}
+			str[i] = str[i] - 32;
+			continue;
 		}
 		if (str[i] == ' ')
 		{
@@ -33,5 +30,5 @@ char *cap_string(char *str)
 				str[i] = str[i] + 32;
 		}
 	}
-	return (0);
+	return (str);
 }
