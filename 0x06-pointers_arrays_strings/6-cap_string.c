@@ -2,14 +2,14 @@
 #include <string.h>
 /**
  * cap_string- capitalizes all words of a string.
- *@str: string
+ *@s: string
  *Return: char
  */
 char *cap_string(char *s)
 {
 	char spc[] = {32, 9, '\n', ',', ';', '.', '!', '?', '"', '(', ')', '{', '}'};
 	int a = 0;
-	long unsigned int i;
+	unsigned long int i;
 
 	for (a = 0; s[a] != '\0'; a++)
 	{
