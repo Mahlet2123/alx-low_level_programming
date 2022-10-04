@@ -4,8 +4,8 @@
 /**
  * _strdup- returns a pointer to a copy of the string
  * @str: string to be copied
- * Return: NULL (str = NULL)
- */
+ * Return: s
+*/
 char *_strdup(char *str)
 {
 	char *s;
@@ -16,6 +16,10 @@ char *_strdup(char *str)
 		return (NULL);
 	}
 	s = malloc(sizeof(char) * (strlen(str) + 1));
+	if (s = NULL)
+	{
+		return (NULL);
+	}
 	for (i = 0; i < strlen(str); i++)
 	{
 		s[i] = str[i];
