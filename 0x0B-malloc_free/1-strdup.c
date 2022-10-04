@@ -12,6 +12,10 @@ char *_strdup(char *str)
 	unsigned int i;
 
 	s = malloc(sizeof(char) * (strlen(str) + 1));
+	if (!(s = malloc(sizeof(char) * (strlen(str) + 1))))
+	{
+		return (NULL);
+	}
 	if (str == NULL)
 	{
 		return (NULL);
