@@ -29,20 +29,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		return (NULL);
 	}
+	i = (l1 + n);
 	for (i = 0; i < l1; i++)
 	{
 		s[i] = s1[i];
 	}
-	for (i = 0; i < n; i++)
-	{
-		s[l1 + i] = s2[i];
-	}
-	if (n >= l2)
-	{
-		for (i = 0; i < l2; i++)
-		{
-			s[l1 + i] = s2[i];
-		}
-	}
+	for (l2 = 0; l2 < n; l2++)
+		s[l1 + l2] = s2[l2];
+	s[l1 + l2] = '\0';
 	return (s);
 }
