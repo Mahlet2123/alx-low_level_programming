@@ -2,7 +2,8 @@
 
 /**
  * array_range- creates an array of integers
- * 
+ * @min: minimum number
+ *@max: maximun number
  * Return: NULL (on failure)
  */
 
@@ -13,16 +14,14 @@ int *array_range(int min, int max)
 
 	if (min > max)
 		return (NULL);
-	n = max -min;
+	n = max - min;
 	p = malloc(sizeof(int) * n + 1);
 
 	if (p == NULL)
-	{
 		return (NULL);
-	}
 	for (i = 0; i < n; i++, min++)
 	{
-			p[i] = min;
+		p[i] = min;
 	}
 	return (p);
 }
