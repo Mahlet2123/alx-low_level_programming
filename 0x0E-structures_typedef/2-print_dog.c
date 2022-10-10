@@ -3,7 +3,6 @@
 /**
  * print_dog- prints a struct dog
  * @d: variable
- *
  * Return: Always 0.
  */
 void print_dog(struct dog *d)
