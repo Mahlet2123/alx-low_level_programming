@@ -3,11 +3,6 @@
 #include <stdio.h>
 #include <string.h>
 
-void print_char(va_list arg);
-void print_int(va_list arg);
-void print_float(va_list arg);
-void print_string(va_list arg);
-
 /**
  * print_all-prints anything
  * @format: a list of types of arguments passed to the
@@ -15,42 +10,39 @@ void print_string(va_list arg);
  */
 void print_all(const char * const format, ...)
 {
-	va_list all;
-	unsigned int i, arg_num;
-	char x;
-	int y;
-	float z;
-	char *w;
+	va_list p;
+	unsigned int i = 0;
+	char *str;
 
-	va_start(all, format);
-	arg_num = strlen(format);
-	for (i = 0; i < arg_num; i++)
+	va_start(p, format);
+	while (format && format[i])
+
 	{
-		if (format[i] == 'c')
+		switch (format[i])
 		{
-			char x = va_arg(all, char);
-			printf("%c", x);
-		}
-		else if (format[i] == 'i')
-		{
-			int y = va_arg(all, int);
-			printf("%d", x);
-		}
-		else if (format[i] == 'f')
-		{
-			float z = va_arg(all, float);
-			printf("%f", x);
-		}
-		else if (format[i] == 's')
-		{
-			char * w = va_arg(all, char *);
-			printf("%s", x);
-		}
-		if (x == NULL)
-			printf("(nil)");
-		if (i != (arg_num - 1))
-			printf("%c", ',');
+		case 'c':
+			printf("%c", va_arg(p, int));
+			printf(", ");
+			break;
+		case 'i':
+			printf("%d", va_arg(p, int));
+			printf(", ");
+			break;
+		case 'f':
+			printf("%f", va_arg(p, double));
+			printf(", ");
+
+			break;
+		case 's':
+			str = va_arg(p, char *);
+			if (!str)
+			{
+				printf("(nil)");
+				break;
+			}
+			printf("%s", str);
+			break;
+		} i++;
 	}
-	putchar('\n');
-	va_end(all);
+	printf("\n"), va_end(p);
 }
