@@ -8,8 +8,6 @@
 
 size_t print_list(const list_t *h)
 {
-	if (h == NULL)
-		exit(98);
 	if (h)
 	{
 		if (h->str != NULL)
