@@ -2,8 +2,9 @@
 
 /**
  *add_nodeint- adds a new node at the beginning of a listint_t list
- *
- *Returns:pointer to the list
+ *@head: double pointer
+ *@n: integer data
+ *Return:pointer to the list
  */
 
 listint_t *add_nodeint(listint_t **head, const int n)
