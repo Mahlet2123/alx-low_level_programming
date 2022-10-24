@@ -10,8 +10,8 @@ void free_listint2(listint_t **head)
 {
 	listint_t *temp;
 
-	if (head == NULL)
-		exit (0);
+	if (*head == NULL)
+		exit(0);
 	while (*head != NULL)
 	{
 		temp = (*head)->next;
