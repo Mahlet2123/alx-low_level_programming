@@ -6,10 +6,11 @@
  *Returns:pointer to the list
  */
 
-listint_t *add_nodeint(listint_t **head, const int n)
+listint_t *add_nodeint_end(listint_t **head, const int n)
 {
-	listint_t *new;
+	listint_t *new, *ptr;
 
+	ptr = *head;
 	new = malloc(sizeof(listint_t));
 	if (new == NULL)
 	{
@@ -17,10 +18,12 @@ listint_t *add_nodeint(listint_t **head, const int n)
 	}
 	new->n = n;
 	if (!new->n)
-	{
 		return (NULL);
+	new->next = NULL;
+	while (ptr->next != NULL)
+	{
+		ptr = ptr->next;
 	}
-	new->next = (*head);
-	(*head) = new;
-	return (*head);
+	ptr->next = new;
+	return (new);
 }
