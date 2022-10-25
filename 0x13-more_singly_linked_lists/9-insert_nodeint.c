@@ -4,6 +4,7 @@
  *insert_nodeint_at_index- inserts a new node at a given position
  *@head: pointer to list
  *@idx: index of the list where the new node should be added
+ *@n: integer data
  *Return: address of the new node
  */
 
@@ -13,10 +14,12 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 
 	new = malloc(sizeof(listint_t));
 	if (new == NULL)
-	{        
+	{
 		return (NULL);
 	}
-	new->n = n;        
+	new->n = n;
+	if (*head == NULL && idx != 0)
+		return (NULL);
 	ptr = *head;
 
 	idx--;
@@ -27,5 +30,10 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	}
 	new->next = ptr->next;
 	ptr->next = new;
+	while (idx == 0)
+	{
+		new->next = *head;
+		*head = new;
+	}
 	return (new);
 }
