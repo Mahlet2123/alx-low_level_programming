@@ -2,8 +2,9 @@
 
 /**
  * delete_nodeint_at_index- deletes the node at index
- *
- * Returns: 1 if it succeeded, -1 if it failed
+ *@head: double pointer to the list
+ *@index: index of the list where the node should be deleted
+ * Return: 1 if it succeeded, -1 if it failed
  */
 
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
@@ -23,7 +24,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	}
 	else
 	{
-	       while (index != 0)
+		while (index != 0)
 		{
 			prev = del;
 			del = del->next;
