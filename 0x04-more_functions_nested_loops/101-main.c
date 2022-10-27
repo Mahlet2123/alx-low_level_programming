@@ -4,7 +4,9 @@
  *
  * Return: Always 0.
  */
-int main(void)
+
+
+void print_number(int i)
 {
 	print_number(98);
 	_putchar('\n');
