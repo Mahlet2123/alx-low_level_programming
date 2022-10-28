@@ -9,11 +9,11 @@
 
 int clear_bit(unsigned long int *n, unsigned int index)
 {
-	int bit = 0;
+	int bit = 1;
 
 	if (index > 64)
 		return (-1);
-	bit = bit << index;
-	*n = (*n | bit);
+	bit = (~(bit << index));
+	*n = (*n & bit);
 	return (1);
 }
