@@ -15,7 +15,6 @@ int main(int argc, char *argv[])
 	fd_1 = open(argv[1], O_RDONLY);
 	if (fd_1 == -1)
 		dprintf(2, "Error: Can't read from file %s\n", argv[1]), exit(98);
-	}
 	fd_2 = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY, 0664);
 	if (fd_2 == -1)
 		dprintf(2, "Error: Can't close fd %s\n", argv[2]), exit(100);
