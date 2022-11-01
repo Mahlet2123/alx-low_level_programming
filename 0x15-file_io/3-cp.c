@@ -33,5 +33,5 @@ int main(int argc, char *argv[])
 	close(fd_2);
 	if (fd_2 == -1)
 		dprintf(2, "Error: Can't close fd %d\n", fd_2), exit(100);
-	return (0);
+	return (1);
 }
