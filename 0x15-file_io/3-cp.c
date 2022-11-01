@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't close fd %s\n", argv[2]);
 		exit(100);
 	}
-	while ((rd = read(fd_1, buff, 1024) != 0)
+	while ((rd = read(fd_1, buff, 1024) != 0))
 	{
 		if (rd == -1)
 		{
