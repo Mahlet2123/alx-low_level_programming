@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 		if (rd == -1)
 			dprintf(2, "Error: Can't read from file %s\n", argv[1]), exit(98);
 		wr = write(fd_2, buff, rd);
-		if (wr == -1)
+		if (wr == -1 || wr != rd)
 			dprintf(2, "Error: Can't write to %s\n", argv[2]), exit(99);
 	}
 	close(fd_1);
