@@ -1,38 +1,47 @@
-#include <stdio.h>
-/**
- * main - entry point
- *
- * Return: 0
+/*
+ * File: 100-print_comb3.c
+ * Auth: Stephen Waweru
  */
 
+#include <stdio.h>
+
+/**
+ * main - Prints all combinantions of 2-digits followed by a newline.
+ *
+ * Return: Always 0.
+ */
 int main(void)
 {
-	int i, j, k, l;
+	int i, j;
+	int a, b, c, d;
 
-	for (i = 0; i <= 9; i++)
+	for (i = 0; i < 100; i++)
 	{
-		for (j = 0; j <= 9; j++)
+		a = i / 10; /* doubles fnum */
+		b = i % 10; /* singles fnum */
+
+		for (j = 0; j < 100; j++)
 		{
-			for (k = 0; k <= 9; k++)
+			c = j / 10; /* doubles snum */
+			d = j % 10; /* singles snum */
+
+			if (a < c || (a == c && b < d))
 			{
-				for (l = 0; l <= 9; l++)
+				putchar(a + '0');
+				putchar(b + '0');
+				putchar(32);
+				putchar(c + '0');
+				putchar(d + '0');
+
+				if (!(a == 9 && b == 8))
 				{
-					if (i == k && j == l)
-						continue;
-					putchar(i + '0');
-					putchar(j + '0');
-					putchar(' ');
-					putchar(k + '0');
-					putchar(l + '0');
-					if (!(i == 9 && j == 9 && k == 9 && l == 8))
-					{
-						putchar(',');
-						putchar(' ');
-					}
+					putchar(44);
+					putchar(32);
 				}
 			}
 		}
 	}
 	putchar(10);
+
 	return (0);
 }
