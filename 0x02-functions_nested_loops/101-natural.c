@@ -14,13 +14,12 @@ int main(void)
 	int multi = 0;
 	int res = 0;
 
-	while (multi < 1024)
+	for (; multi < 1024; multi++)
 	{
 		if (multi % 3 == 0 || multi % 5 == 0)
 		{
 			res += multi;
 		}
-		multi += 1;
 	}
 	printf("%d\n", res);
 	return (0);
