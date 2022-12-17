@@ -8,15 +8,9 @@
  */
 
 int mul(int i, int j)
-
 {
-
 	int product;
 
-
-
 	product = i * j;
-
 	return (product);
-
 }
