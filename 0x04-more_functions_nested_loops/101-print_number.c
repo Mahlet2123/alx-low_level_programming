@@ -14,16 +14,16 @@ void print_number(int i)
 
 	if  (i < 0)
 	{
-	j = -i;
-	_putchar('-');
+		j = -i;
+		_putchar('-');
 	}
 	else
 	{
-	j = i;
+		j = i;
 	}
 	if (j / 10)
 	{
-	print_number(j / 10);
+		print_number(j / 10);
 	}
 	_putchar((j % 10) + '0');
 }
