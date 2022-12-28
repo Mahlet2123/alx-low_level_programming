@@ -7,11 +7,23 @@
  */
 char *_strchr(char *s, char c)
 {
-	for (; ; ++s)
+	long unsigned int i;
+/**
+*	for (; ; ++s)
+*	{
+*		if (*s == c)
+*			return ((char *)s);
+*		if (*s == '\0')
+*			return (0);
+*	}
+*/
+	for (i = 0; i < strlen(s); i++)
 	{
-		if (*s == c)
-			return ((char *)s);
-		if (*s == '\0')
-			return (0);
+		if(s[i] != c)
+		{
+			s += 2;
+			return (s);
+		}
 	}
+	return(NULL);
 }
