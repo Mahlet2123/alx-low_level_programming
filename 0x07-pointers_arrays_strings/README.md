@@ -1,1 +1,1 @@
-the third pointer arrays and strings exercise.
+# 0x07-pointers_arrays_strings
