@@ -28,16 +28,12 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			strcpy(entry->value, value);
 			return (1);
 		}
-		else
-		{
-			ht->array[index] = new_item;
-			new_item->next = entry;
-			return (1);
-		}
 	}
-	/**free_item(new_item);*/
-	return (0);
+	ht->array[index] = new_item;
+	new_item->next = entry;
+	return (1);
 }
+
 /**
  * create_new_item- creates new item
  * @key: The key, string
