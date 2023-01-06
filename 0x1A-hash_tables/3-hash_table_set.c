@@ -2,8 +2,10 @@
 
 /**
  * hash_table_set- adds an element to the hash table.
- *
- * Returns: 1 if it succeeded, 0 otherwise
+ * @ht: hash table
+ * @key: The key, string
+ * @value: value associated with the key
+ * Return: 1 if it succeeded, 0 otherwise
  */
 
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
@@ -26,23 +28,32 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 	return (1);
 }
-
+/**
+ * create_new_item- creates new item
+ * @key: The key, string
+ * @value: value associated with key
+ * Return: pointer to the item
+ */
 hash_node_t *create_new_item(const char *key, const char *value)
 {
 	hash_node_t *new_item;
-       
-	new_item = malloc (sizeof(hash_node_t));
+
+	new_item = malloc(sizeof(hash_node_t));
 	if (new_item == NULL)
-		return NULL;
-	new_item->key = (char*) malloc(strlen(key) + 1);
-	new_item->value = (char*) malloc(strlen(value) + 1);
+		return (NULL);
+	new_item->key = (char *) malloc(strlen(key) + 1);
+	new_item->value = (char *) malloc(strlen(value) + 1);
 	new_item->next = NULL;
 
 	strcpy(new_item->key, key);
 	strcpy(new_item->value, value);
 	return (new_item);
 }
-
+/**
+ * free_item- freesallocated item
+ * @item: created item
+ * Return: void
+ */
 void free_item(hash_node_t *item)
 {
 	if (item != NULL)
