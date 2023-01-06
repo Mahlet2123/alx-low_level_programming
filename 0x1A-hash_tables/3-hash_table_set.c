@@ -18,15 +18,25 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	/** try to look up the key index*/
 	entry = ht->array[index];
 	if (entry == NULL)
+		ht->array[index] = new_item;
+	if (entry != NULL)
 	{
-		ht->array[index] = create_new_item(key, value);
+		if (strcmp(entry->key, key) == 0)
+		{
+			free(entry->value);
+			entry->value = malloc(strlen(value) + 1);
+			strcpy(entry->value, value);
+			return (1);
+		}
+		else
+		{
+			ht->array[index] = new_item;
+			new_item->next = entry;
+			return (1);
+		}
 	}
-	else
-	{
-		free_item(new_item);
-		return (0);
-	}
-	return (1);
+	free_item(new_item);
+	return (0);
 }
 /**
  * create_new_item- creates new item
