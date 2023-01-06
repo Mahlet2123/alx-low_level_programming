@@ -13,6 +13,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *new_item, *entry;
 	unsigned long int index;
 
+	if (!ht || !key || !*key || !value)
+		return (0);
 	new_item = create_new_item(key, value);
 	index = key_index((const unsigned char *)key, ht->size);
 	/** try to look up the key index*/
