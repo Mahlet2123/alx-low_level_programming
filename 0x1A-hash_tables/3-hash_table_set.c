@@ -31,6 +31,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			return (1);
 		}
 	}
+/** handle collision: add the new node at the beginning of the list*/
 	ht->array[index] = new_item;
 	new_item->next = entry;
 	return (1);
