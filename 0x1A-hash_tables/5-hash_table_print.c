@@ -22,8 +22,8 @@ void hash_table_print(const hash_table_t *ht)
 		item = ht->array[i];
 		if (item)
 		{
-			 if (!(item->key || item->value))
-			 	break;
+			if (!(item->key || item->value))
+				break;
 			printf("'%s': '%s'", item->key, item->value);
 			item = item->next;
 		}
