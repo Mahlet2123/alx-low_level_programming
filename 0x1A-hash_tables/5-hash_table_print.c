@@ -20,7 +20,11 @@ void hash_table_print(const hash_table_t *ht)
 	for (i = 0; i < ht->size; i++)
 	{
 		if ((item = ht->array[i]))
+		{
+			if (!(item->key || item->value))
+				break;
 			printf("'%s': '%s'", item->key, item->value);
+		}
 	}
 	printf("}\n");
 }
