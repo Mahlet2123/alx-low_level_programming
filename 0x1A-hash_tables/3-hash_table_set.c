@@ -58,13 +58,3 @@ hash_node_t *create_new_item(const char *key, const char *value)
 	strcpy(new_item->value, value);
 	return (new_item);
 }
-/**
- * free_item- freesallocated item
- * @item: created item
- * Return: void
- */
-void free_item(hash_node_t *item)
-{
-	if (item != NULL)
-		free(item);
-}
