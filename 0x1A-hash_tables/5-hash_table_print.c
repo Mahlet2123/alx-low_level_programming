@@ -20,12 +20,12 @@ void hash_table_print(const hash_table_t *ht)
 	for (; i < ht->size; i++)
 	{
 		item = ht->array[i];
-		if (item)
+		while (item)
 		{
 			if (!(item->key || item->value))
 				continue;
 			printf("'%s': '%s'", item->key, item->value);
-			if (count < (ht->size - 1) && item->next != NULL)
+			if (count < (ht->size - 2))
 			{
 				printf(", ");
 				count++;
