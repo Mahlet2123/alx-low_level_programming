@@ -13,7 +13,7 @@ int main(void)
     hash_table_t *ht;
     char *value;
 
-    ht = hash_table_create(1024);
+    ht = hash_table_create(4);
     hash_table_set(ht, "c", "fun");
     hash_table_set(ht, "python", "awesome");
     hash_table_set(ht, "Bob", "and Kris love asm");
