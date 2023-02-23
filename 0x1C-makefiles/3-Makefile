@@ -2,24 +2,19 @@ CC = gcc
 SRC = main.c school.c
 OBJ = $(SRC:%.c=%.o)
 NAME = school
-RM = $(fclean)
+RM = rm -f 
 
 all : $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
 clean :
-	find . -name '*~' -delete
-	find . -name '*#' -delete
-	rm $(NAME)
+	$(RM) *~ *# $(NAME)
 
 oclean :
-	rm *.o
+	$(RM) $(OBJ)
 
 fclean : 
-	find . -name '*~' -delete
-	find . -name '*#' -delete
-	rm $(NAME)
-	rm *.o
+	$(RM) *~ *# $(NAME) $(OBJ)
 
 re : fclean
 	$(CC) $(SRC) -c 
