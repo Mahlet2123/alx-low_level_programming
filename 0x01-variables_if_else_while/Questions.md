@@ -198,13 +198,14 @@ Write a program that prints the lowercase alphabet in reverse, followed by a new
 	julien@ubuntu:~/0x01$
     
 ### 8. Hexadecimal
--	mandatory
--	Score: 65.0% (Checks completed: 100.0%)
+- mandatory
+- Score: 65.0% (Checks completed: 100.0%)
+
 Write a program that prints all the numbers of base 16 in lowercase, followed by a new line.
 
-	-	You can only use the putchar function (every other function (printf, puts, etc…) is forbidden)
-	-	All your code should be in the main function
-	-	You can only use putchar three times in your code
+	- You can only use the putchar function (every other function (printf, puts, etc…) is forbidden)
+	- All your code should be in the main function
+	- You can only use putchar three times in your code
 
 	julien@ubuntu:~/0x01$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 8-print_base16.c -o 8-print_base16
 	julien@ubuntu:~/0x01$ ./8-print_base16
@@ -212,16 +213,16 @@ Write a program that prints all the numbers of base 16 in lowercase, followed by
 	julien@ubuntu:~/0x01$
     
 ### 9. Patience, persistence and perspiration make an unbeatable combination for success
--	mandatory
--	Score: 65.0% (Checks completed: 100.0%)
+- mandatory
+- Score: 65.0% (Checks completed: 100.0%)
 Write a program that prints all possible combinations of single-digit numbers.
 
-	-	Numbers must be separated by ,, followed by a space
-	-	Numbers should be printed in ascending order
-	-	You can only use the putchar function (every other function (printf, puts, etc…) is forbidden)
-	-	All your code should be in the main function
-	-	You can only use putchar four times maximum in your code
-	-	You are not allowed to use any variable of type char
+	- Numbers must be separated by ,, followed by a space
+	- Numbers should be printed in ascending order
+	- You can only use the putchar function (every other function (printf, puts, etc…) is forbidden)
+	- All your code should be in the main function
+	- You can only use putchar four times maximum in your code
+	- You are not allowed to use any variable of type char
 
 	julien@ubuntu:~/0x01$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 9-print_comb.c -o 9-print_comb
 	julien@ubuntu:~/0x01$ ./9-print_comb | cat -e
@@ -234,15 +235,15 @@ Write a program that prints all possible combinations of single-digit numbers.
 
 Write a program that prints all possible different combinations of two digits.
 
-	-	Numbers must be separated by ,, followed by a space
-	-	The two digits must be different
-	-	01 and 10 are considered the same combination of the two digits 0 and 1
-	-	Print only the smallest combination of two digits
-	-	Numbers should be printed in ascending order, with two digits
-	-	You can only use the putchar function (every other function (printf, puts, etc…) is forbidden)
-	-	You can only use putchar five times maximum in your code
-	-	You are not allowed to use any variable of type char
-	-	All your code should be in the main function
+	- Numbers must be separated by ,, followed by a space
+	- The two digits must be different
+	- 01 and 10 are considered the same combination of the two digits 0 and 1
+	- Print only the smallest combination of two digits
+	- Numbers should be printed in ascending order, with two digits
+	- You can only use the putchar function (every other function (printf, puts, etc…) is forbidden)
+	- You can only use putchar five times maximum in your code
+	- You are not allowed to use any variable of type char
+	- All your code should be in the main function
 
 	julien@ubuntu:~/0x01$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 100-print_comb3.c -o 100-print_comb3
 	julien@ubuntu:~/0x01$ ./100-print_comb3
@@ -255,15 +256,15 @@ Write a program that prints all possible different combinations of two digits.
 
 Write a program that prints all possible different combinations of three digits.
 
-	-	Numbers must be separated by ,, followed by a space
-	-	The three digits must be different
-	-	012, 120, 102, 021, 201, 210 are considered the same combination of the three digits 0, 1 and 2
-	-	Print only the smallest combination of three digits
-	-	Numbers should be printed in ascending order, with three digits
-	-	You can only use the putchar function (every other function (printf, puts, etc…) is forbidden)
-	-	You can only use putchar six times maximum in your code
-	-	You are not allowed to use any variable of type char
-	-	All your code should be in the main function
+	- All Numbers must be separated by ,, followed by a space
+	- The three digits must be different
+	- 012, 120, 102, 021, 201, 210 are considered the same combination of the three digits 0, 1 and 2
+	- Print only the smallest combination of three digits
+	- Numbers should be printed in ascending order, with three digits
+	- You can only use the putchar function (every other function (printf, puts, etc…) is forbidden)
+	- You can only use putchar six times maximum in your code
+	- You are not allowed to use any variable of type char
+	- All your code should be in the main function
 
 	julien@ubuntu:~/0x01$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 101-print_comb4.c -o 101-print_comb4
 	julien@ubuntu:~/0x01$ ./101-print_comb4
