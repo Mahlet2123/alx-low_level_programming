@@ -223,7 +223,7 @@ Write a program that prints all possible combinations of single-digit numbers.
 	- All your code should be in the main function
 	- You can only use putchar four times maximum in your code
 	- You are not allowed to use any variable of type char
-
+	
 	julien@ubuntu:~/0x01$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 9-print_comb.c -o 9-print_comb
 	julien@ubuntu:~/0x01$ ./9-print_comb | cat -e
 	0, 1, 2, 3, 4, 5, 6, 7, 8, 9$
