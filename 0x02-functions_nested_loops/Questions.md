@@ -13,7 +13,7 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 - What are the gcc flags -Wall -Werror -pedantic -Wextra -std=gnu89
 - What are header files and how to to use them with #include
 
-##Tasks
+## Tasks
 
 ### 0. _putchar
 - mandatory
