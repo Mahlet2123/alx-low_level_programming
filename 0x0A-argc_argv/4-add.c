@@ -1,12 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
+
 /**
  * main- entry point
  * @argc: arguement count
  * @argv: arguement array
  * Return: 0
  */
+
 int main(int argc, char *argv[])
 {
 	int n, m, i = 1, sum = 0;
@@ -15,7 +17,7 @@ int main(int argc, char *argv[])
 	{
 		printf("0\n");
 	}
-	for (m = 1; i < argc && m < argc; m++)
+	for (m = 0; i < argc && argv[i][m]; m++)
 	{
 		if (isdigit(argv[i][m]) == 0)
 		{
