@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 /**
  * main- entry point
  * @argc: arguement count
@@ -8,7 +9,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int n, m, sum = 0;
+	int n, m, i = 1, sum = 0;
 
 	if ((argc < 1))
 	{
@@ -16,11 +17,12 @@ int main(int argc, char *argv[])
 	}
 	for (m = 1; m < argc; m++)
 	{
-		if ((*argv[m] < 48 && *argv[m] > 57))
+		if (isdigit(*argv[m]) == 0)
 		{
-		printf("Error\n");
-		return (1);
+			printf("Error\n");
+			return (1);
 		}
+		i++;
 	}
 	for (n = 1; n < argc; n++)
 	{
