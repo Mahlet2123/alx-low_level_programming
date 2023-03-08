@@ -400,7 +400,7 @@ Write a function that convert a string to an integer.
 - advanced
 - Score: 50.0% (Checks completed: 100.0%)
 
-Create a program that generates random valid passwords for the program 101-crackme.
+Create a program that generates random valid passwords for the program [101-crackme](https://github.com/holbertonschool/0x04.c).
 
 	- You are allowed to use the standard library
 	- You don’t have to pass the betty-style tests (you still need to pass the betty-doc tests)
