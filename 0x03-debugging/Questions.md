@@ -71,109 +71,111 @@ Copy this main file. Comment out (don’t delete it!) the part of the code that 
 
 Don’t add or remove any lines of code, as we will be checking your line count. You are only allowed to comment out existing code.
 You do not have to compile with -Wall -Werror -Wextra -pedantic for this task.
-carrie@ubuntu:/debugging$ cat 1-main.c
-#include <stdio.h>
 
-/**
-* main - causes an infinite loop
-* Return: 0
-*/
+	carrie@ubuntu:/debugging$ cat 1-main.c
+	#include <stdio.h>
 
-int main(void)
-{
-        int i;
+	/**
+	* main - causes an infinite loop
+	* Return: 0
+	*/
 
-        printf("Infinite loop incoming :(\n");
+	int main(void)
+	{
+		int i;
 
-        i = 0;
+		printf("Infinite loop incoming :(\n");
 
-        while (i < 10)
-        {
-                putchar(i);
-        }
+		i = 0;
 
-        printf("Infinite loop avoided! \\o/\n");
+		while (i < 10)
+		{
+			putchar(i);
+		}
 
-        return (0);
-}
-carrie@ubuntu:/debugging$
-Your output should look like this:
+		printf("Infinite loop avoided! \\o/\n");
 
-carrie@ubuntu:/debugging$ gcc -std=gnu89 1-main.c -o 1-main
-carrie@ubuntu:/debugging$ ./1-main
-Infinite loop incoming :(
-Infinite loop avoided! \o/
-carrie@ubuntu:/debugging$ wc -l 1-main.c
-24 1-main.c
-carrie@ubuntu:/debugging$
+		return (0);
+	}
+	carrie@ubuntu:/debugging$
+	Your output should look like this:
+
+	carrie@ubuntu:/debugging$ gcc -std=gnu89 1-main.c -o 1-main
+	carrie@ubuntu:/debugging$ ./1-main
+	Infinite loop incoming :(
+	Infinite loop avoided! \o/
+	carrie@ubuntu:/debugging$ wc -l 1-main.c
+	24 1-main.c
+	carrie@ubuntu:/debugging$
     
 ### 2. 0 > 972?
-mandatory
-Score: 65.0% (Checks completed: 100.0%)
+- mandatory
+- Score: 65.0% (Checks completed: 100.0%)
 
 This program prints the largest of three integers.
 
-carrie@ubuntu:/debugging$ cat 2-main.c
-#include <stdio.h>
-#include "main.h"
+	carrie@ubuntu:/debugging$ cat 2-main.c
+	#include <stdio.h>
+	#include "main.h"
 
-/**
-* main - prints the largest of 3 integers
-* Return: 0
-*/
+	/**
+	* main - prints the largest of 3 integers
+	* Return: 0
+	*/
 
-int main(void)
-{
-        int a, b, c;
-        int largest;
+	int main(void)
+	{
+		int a, b, c;
+		int largest;
 
-        a = 972;
-        b = -98;
-        c = 0;
+		a = 972;
+		b = -98;
+		c = 0;
 
-        largest = largest_number(a, b, c);
+		largest = largest_number(a, b, c);
 
-        printf("%d is the largest number\n", largest);
+		printf("%d is the largest number\n", largest);
 
-        return (0);
-}
-carrie@ubuntu:/debugging$
-carrie@ubuntu:/debugging$ cat 2-largest_number.c
-#include "main.h"
+		return (0);
+	}
+	carrie@ubuntu:/debugging$
+	carrie@ubuntu:/debugging$ cat 2-largest_number.c
+	#include "main.h"
 
-/**
- * largest_number - returns the largest of 3 numbers
- * @a: first integer
- * @b: second integer
- * @c: third integer
- * Return: largest number
- */
+	/**
+	 * largest_number - returns the largest of 3 numbers
+	 * @a: first integer
+	 * @b: second integer
+	 * @c: third integer
+	 * Return: largest number
+	 */
 
-int largest_number(int a, int b, int c)
-{
-    int largest;
+	int largest_number(int a, int b, int c)
+	{
+	    int largest;
 
-    if (a > b && b > c)
-    {
-        largest = a;
-    }
-    else if (b > a && a > c)
-    {
-        largest = b;
-    }
-    else
-    {
-        largest = c;
-    }
+	    if (a > b && b > c)
+	    {
+		largest = a;
+	    }
+	    else if (b > a && a > c)
+	    {
+		largest = b;
+	    }
+	    else
+	    {
+		largest = c;
+	    }
 
-    return (largest);
-}
+	    return (largest);
+	}
 
-carrie@ubuntu:/debugging$
-carrie@ubuntu:/debugging$ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 2-largest_number.c 2-main.c -o 2-main
-carrie@ubuntu:/debugging$ ./2-main
-0 is the largest number
-carrie@ubuntu:/debugging$
+	carrie@ubuntu:/debugging$
+	carrie@ubuntu:/debugging$ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 2-largest_number.c 2-main.c -o 2-main
+	carrie@ubuntu:/debugging$ ./2-main
+	0 is the largest number
+	carrie@ubuntu:/debugging$
+	
 ? That’s definitely not right.
 
 Fix the code in 2-largest_number.c so that it correctly prints out the largest of three numbers, no matter the case.
@@ -186,144 +188,146 @@ Line count will not be checked for this task.
 
 This program converts a date to the day of year and determines how many days are left in the year, taking leap year into consideration.
 
-carrie@ubuntu:/debugging$ cat 3-main_a.c
-#include <stdio.h>
-#include "main.h"
+	carrie@ubuntu:/debugging$ cat 3-main_a.c
+	#include <stdio.h>
+	#include "main.h"
 
-/**
-* main - takes a date and prints how many days are left in the year, taking
-* leap years into account
-* Return: 0
-*/
+	/**
+	* main - takes a date and prints how many days are left in the year, taking
+	* leap years into account
+	* Return: 0
+	*/
 
-int main(void)
-{
-    int month;
-    int day;
-    int year;
+	int main(void)
+	{
+	    int month;
+	    int day;
+	    int year;
 
-    month = 4;
-    day = 01;
-    year = 1997;
+	    month = 4;
+	    day = 01;
+	    year = 1997;
 
-    printf("Date: %02d/%02d/%04d\n", month, day, year);
+	    printf("Date: %02d/%02d/%04d\n", month, day, year);
 
-    day = convert_day(month, day);
+	    day = convert_day(month, day);
 
-    print_remaining_days(month, day, year);
+	    print_remaining_days(month, day, year);
 
-    return (0);
-}
+	    return (0);
+	}
 
-carrie@ubuntu:/debugging$
-carrie@ubuntu:/debugging$ cat 3-convert_day.c
-#include "main.h"
+	carrie@ubuntu:/debugging$
+	carrie@ubuntu:/debugging$ cat 3-convert_day.c
+	#include "main.h"
 
-/**
-* convert_day - converts day of month to day of year, without accounting
-* for leap year
-* @month: month in number format
-* @day: day of month
-* Return: day of year
-*/
+	/**
+	* convert_day - converts day of month to day of year, without accounting
+	* for leap year
+	* @month: month in number format
+	* @day: day of month
+	* Return: day of year
+	*/
 
-int convert_day(int month, int day)
-{
-    switch (month)
-    {
-        case 2:
-            day = 31 + day;
-            break;
-        case 3:
-            day = 59 + day;
-            break;
-        case 4:
-            day = 90 + day;
-            break;
-        case 5:
-            day = 120 + day;
-            break;
-        case 6:
-            day = 151 + day;
-            break;
-        case 7:
-            day = 181 + day;
-            break;
-        case 8:
-            day = 212 + day;
-            break;
-        case 9:
-            day = 243 + day;
-            break;
-        case 10:
-            day = 273 + day;
-            break;
-        case 11:
-            day = 304 + day;
-            break;
-        case 12:
-            day = 334 + day;
-            break;
-        default:
-            break;
-    }
-    return (day);
-}
+	int convert_day(int month, int day)
+	{
+	    switch (month)
+	    {
+		case 2:
+		    day = 31 + day;
+		    break;
+		case 3:
+		    day = 59 + day;
+		    break;
+		case 4:
+		    day = 90 + day;
+		    break;
+		case 5:
+		    day = 120 + day;
+		    break;
+		case 6:
+		    day = 151 + day;
+		    break;
+		case 7:
+		    day = 181 + day;
+		    break;
+		case 8:
+		    day = 212 + day;
+		    break;
+		case 9:
+		    day = 243 + day;
+		    break;
+		case 10:
+		    day = 273 + day;
+		    break;
+		case 11:
+		    day = 304 + day;
+		    break;
+		case 12:
+		    day = 334 + day;
+		    break;
+		default:
+		    break;
+	    }
+	    return (day);
+	}
 
-carrie@ubuntu:/debugging$
-carrie@ubuntu:/debugging$ cat 3-print_remaining_days.c
-#include <stdio.h>
-#include "main.h"
+	carrie@ubuntu:/debugging$
+	carrie@ubuntu:/debugging$ cat 3-print_remaining_days.c
+	#include <stdio.h>
+	#include "main.h"
 
-/**
-* print_remaining_days - takes a date and prints how many days are
-* left in the year, taking leap years into account
-* @month: month in number format
-* @day: day of month
-* @year: year
-* Return: void
-*/
+	/**
+	* print_remaining_days - takes a date and prints how many days are
+	* left in the year, taking leap years into account
+	* @month: month in number format
+	* @day: day of month
+	* @year: year
+	* Return: void
+	*/
 
-void print_remaining_days(int month, int day, int year)
-{
-    if ((year % 4 == 0 || year % 400 == 0) && !(year % 100 == 0))
-    {
-        if (month >= 2 && day >= 60)
-        {
-            day++;
-        }
+	void print_remaining_days(int month, int day, int year)
+	{
+	    if ((year % 4 == 0 || year % 400 == 0) && !(year % 100 == 0))
+	    {
+		if (month >= 2 && day >= 60)
+		{
+		    day++;
+		}
 
-        printf("Day of the year: %d\n", day);
-        printf("Remaining days: %d\n", 366 - day);
-    }
-    else
-    {
-        if (month == 2 && day == 60)
-        {
-            printf("Invalid date: %02d/%02d/%04d\n", month, day - 31, year);
-        }
-        else
-        {
-            printf("Day of the year: %d\n", day);
-            printf("Remaining days: %d\n", 365 - day);
-        }
-    }
-}
+		printf("Day of the year: %d\n", day);
+		printf("Remaining days: %d\n", 366 - day);
+	    }
+	    else
+	    {
+		if (month == 2 && day == 60)
+		{
+		    printf("Invalid date: %02d/%02d/%04d\n", month, day - 31, year);
+		}
+		else
+		{
+		    printf("Day of the year: %d\n", day);
+		    printf("Remaining days: %d\n", 365 - day);
+		}
+	    }
+	}
 
-carrie@ubuntu:/debugging$ 
-carrie@ubuntu:/debugging$ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 3-convert_day.c 3-print_remaining_days.c 3-main_a.c -o 3-main_a 
-carrie@ubuntu:/debugging$ ./3-main_a
-Date: 04/01/1997
-Day of the year: 91
-Remaining days: 274
-carrie@ubuntu:/debugging$
+	carrie@ubuntu:/debugging$ 
+	carrie@ubuntu:/debugging$ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 3-convert_day.c 3-print_remaining_days.c 3-main_a.c -o 3-main_a 
+	carrie@ubuntu:/debugging$ ./3-main_a
+	Date: 04/01/1997
+	Day of the year: 91
+	Remaining days: 274
+	carrie@ubuntu:/debugging$
+	
 Output looks good for 04/01/1997! Let’s make a new main file 3-main_b.c to try a case that is a leap year: 02/29/2000.
 
-carrie@ubuntu:/debugging$ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 3-convert_day.c 3-print_remaining_days.c 3-main_b.c -o 3-main_b 
-carrie@ubuntu:/debugging$ ./3-main_b
-Date: 02/29/2000
-Invalid date: 02/29/2000
-carrie@ubuntu:/debugging$
+	carrie@ubuntu:/debugging$ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 3-convert_day.c 3-print_remaining_days.c 3-main_b.c -o 3-main_b 
+	carrie@ubuntu:/debugging$ ./3-main_b
+	Date: 02/29/2000
+	Invalid date: 02/29/2000
+	carrie@ubuntu:/debugging$
+
 ? That doesn’t seem right.
 
 Fix the print_remaining_days() function so that the output works correctly for all dates and all leap years.
