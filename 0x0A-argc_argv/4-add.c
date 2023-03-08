@@ -15,9 +15,9 @@ int main(int argc, char *argv[])
 	{
 		printf("0\n");
 	}
-	for (m = 1; m < argc; m++)
+	for (m = 1; i < argc && m < argc; m++)
 	{
-		if (isdigit(*argv[m]) == 0)
+		if (isdigit(argv[i][m]) == 0)
 		{
 			printf("Error\n");
 			return (1);
