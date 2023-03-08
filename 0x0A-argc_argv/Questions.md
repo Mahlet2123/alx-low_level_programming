@@ -101,7 +101,7 @@ Write a program that multiplies two numbers.
 	
 ### 4. To infinity and beyond
 - mandatory
-- Score: 87.5% (Checks completed: 87.5%)
+- Score: 93.75% (Checks completed: 100.00%)
 
 Write a program that adds positive numbers.
 
