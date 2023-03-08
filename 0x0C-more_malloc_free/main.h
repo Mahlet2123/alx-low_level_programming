@@ -2,8 +2,6 @@
 #define MAIN_H
 #include <stdlib.h>
 
-int main(void);
-
 void exit(int status);
 
 int _putchar(char c);
