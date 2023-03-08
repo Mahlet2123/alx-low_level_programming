@@ -21,12 +21,12 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 
 Write a program that prints _putchar, followed by a new line.
 
-  The program should return 0
+	The program should return 0
 
-  julien@ubuntu:~/0x02$  gcc -Wall -pedantic -Werror -Wextra -std=gnu89 _putchar.c 0-putchar.c -o 0-putchar
-  julien@ubuntu:~/0x02$ ./0-putchar 
-  _putchar
-  julien@ubuntu:~/0x02$ 
+	julien@ubuntu:~/0x02$  gcc -Wall -pedantic -Werror -Wextra -std=gnu89 _putchar.c 0-putchar.c -o 0-putchar
+	julien@ubuntu:~/0x02$ ./0-putchar 
+	_putchar
+	julien@ubuntu:~/0x02$ 
 
 ### 1. I sometimes suffer from insomnia. And when I can't fall asleep, I play what I call the alphabet game
 - mandatory
