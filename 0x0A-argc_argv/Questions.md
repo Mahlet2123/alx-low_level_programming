@@ -125,7 +125,7 @@ Write a program that adds positive numbers.
 	
 ### 5. Minimal Number of Coins for Change
 - advanced
-- Score: 0.0% (Checks completed: 0.0%)
+- Score: 50.00% (Checks completed: 100.00%)
 
 Write a program that prints the minimum number of coins to make change for an amount of money.
 
