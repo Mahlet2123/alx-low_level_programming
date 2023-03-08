@@ -2,8 +2,6 @@
 #define MAIN_H
 #include <stdlib.h>
 
-int main(void);
-
 int _putchar(char c);
 
 char *create_array(unsigned int size, char c);
