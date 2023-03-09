@@ -1,7 +1,7 @@
 0x0E. C - Structures, typedef
 
 
-### [0. Django](./dog.h)
+### [0. Poppy](./dog.h)
 * Define a new type struct dog
 
 ### [1. A dog is the only thing on earth that loves you more than you love yourself](./1-init_dog.c)
