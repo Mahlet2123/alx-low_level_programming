@@ -1,7 +1,7 @@
 #include "search_algos.h"
 /**
- * binary_search - searches for a value in a sorted array of integers
- * using the Binary search algorithm
+ * jump_search - searches for a value in a sorted array of integers
+ * using the jump search algorithm
  *
  * @array: pointer to the first element of the array to search in
  * @size: the number of elements in array
@@ -15,7 +15,7 @@
  * you have to print this value
  */
 
-int binary_search(int *array, size_t size, int value)
+int jump_search(int *array, size_t size, int value)
 {
 	size_t l = 0, r = size - 1, i;
 	int m;
@@ -25,9 +25,9 @@ int binary_search(int *array, size_t size, int value)
 		m =(l + r) / 2;
 		printf("Searching in array:");
 		for (i = l; i < r; i++)
-			printf(" %d,", array[i]);
+			printf("%d, ", array[i]);
 		if (i == r)
-			printf(" %d", array[i]);
+			printf("%d", array[i]);
 		printf("\n");
 		if (array[m] < value)
 			l = m + 1;
