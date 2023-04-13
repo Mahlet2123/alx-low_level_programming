@@ -7,6 +7,11 @@
  * @value: value to be searched
  *
  * Return: index of value or -1
+ * If value is not present in array or if array is NULL,
+ * your function must return -1
+ *
+ * To determine the probe position, you can use :
+ * pos=low+(((double)(high - low)/(array[high]-array[low]))*(value-array[low]))
  */
 int interpolation_search(int *array, size_t size, int value)
 {
@@ -32,6 +37,5 @@ int interpolation_search(int *array, size_t size, int value)
 			low = pos + 1;
 
 	}
-
 	return (-1);
 }
