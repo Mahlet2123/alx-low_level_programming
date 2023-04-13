@@ -29,7 +29,7 @@ int exponential_search(int *array, size_t size, int value)
 	newsize -= remove_count;
 	i >>= 1;
 	printf("Value found between indexes [%lu] and [%lu]\n",
-			i, i + newsize);
+			i, i + newsize - 1);
 	result = binary_search(array + i, newsize, value);
 	if (result == -1)
 		return (-1);
